@@ -26,6 +26,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 #Boostrapping
 gem 'bootstrap-sass', '~> 3.3.6'
+# twilio for sms
+gem 'twilio-ruby', '~> 4.11', '>= 4.11.1'
 
 # fancy icons
 gem 'font-awesome-rails'
