@@ -13,6 +13,41 @@
  *= require_tree .
  *= require_self
  */
+
+
+ $well-bg: #FFFFFF;
+ $navbar-default-brand-color: #2ecc71;
+ $navbar-default-bg: white;
+ $brand-primary: #2ecc71;
+
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "font-awesome";
+ @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+ html.turbolinks-progress-bar::before {
+   background-color: red !important;
+   height: 3px !important;
+ }
+
+ body {
+   font-family: "Roboto", sans-serif;
+  }
+
+  .navbar-brand {
+    font-weight: bold;
+  }
+  // For giving the wells a bit more pop color
+  .blurb {
+    background-color: red;
+  }
+  footer {
+    box-shadow: 0 0 1px rgba(0,0,0,0.15);
+    font-size: 14px;
+    font-weight: 700;
+    height: 70px;
+    line-height: 70px;
+    margin: 70px 0px 0px 0px;
+    padding: 0px 20px;
+    text-transform: uppercase;
+  }

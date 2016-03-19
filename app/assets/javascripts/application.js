@@ -13,4 +13,18 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap-sprockets
 //= require_tree .
+$(document).ready(function() {
+  setTimeout(function() {
+    $(".alert-fade").fadeOut("slow", function() {
+      $(this).remove();
+    })
+  }, 4500 );
+});
+
+$(document).on('ready', function(event) {
+  // initialize persistent state
+  Turbolinks.enableProgressBar();
+//  Turbolinks.ProgressBar.enable();
+});
