@@ -8,30 +8,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to "talktome.bitch", root_path, class: "navbar-brand" %>
+      <%= link_to "talkstalk.io", root_path, class: "navbar-brand" %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <% if user_signed_in? %>
-      <ul class="nav navbar-nav">
-        <li>
-          <%= link_to root_path do %>
-            <i class="fa fa-comment fa-fw"></i> New Message
-          <% end %>
-        </li>
-        <li>
-          <%= link_to root_path do %>
-            <i class="fa fa-book fa-fw"></i> Address Book
-          <% end %>
-        </li>
-        <li>
-          <%= link_to root_path do %>
-            <i class="fa fa-clock-o fa-fw"></i> Schedule Messages
-          <% end %>
-        </li>
-      </ul>
-    <% end %>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
           <li class="dropdown">
