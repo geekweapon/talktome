@@ -26,8 +26,10 @@ class SMS
       "Did you hear the one about the one-legged dog?"
     elsif @payload == "poostachio"
       "Hi Mustachio, I <3 you."
+    elsif @payload == "help me"
+      "Available commands: 'joke', 'hi', 'bye', 'how are you?'"
     else
-      "Sorry, but I don't know how to respond to, #{@payload}. Send 'help' for more information"
+      "Sorry, but I don't know how to respond to, #{@payload}. Send 'help me' for more information"
     end
   end
 end
