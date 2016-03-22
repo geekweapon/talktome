@@ -24,8 +24,10 @@ class SMS
       "I'm doing fine, how are you?  Lovely weather we're having"
     elsif @payload == "joke"
       "Did you hear the one about the one-legged dog?"
+    elsif @payload == "poostachio"
+      "Hi Mustachio, I <3 you."
     else
-      "Thanks for stalking me, your phone number is #{@from_number}, your message was #{@payload}"
+      "Sorry, but I don't know how to respond to, #{@payload}. Send 'help' for more information"
     end
   end
 end
