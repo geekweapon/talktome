@@ -27,7 +27,7 @@ class SMS
     elsif @payload == "joke"
       "Did you hear the one about the one-legged dog?"
     elsif @payload == "help me"
-      "Available commands: 'joke', 'hi', 'bye', 'how are you?'"
+      "Available commands: 'joke', 'hi', 'bye', 'how are you?', 'weather'"
     elsif @payload == "weather"
       "Enter your five digit US zip code i.e. 77057"
     elsif @payload.match(/\d{5}/)
