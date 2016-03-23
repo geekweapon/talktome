@@ -28,6 +28,10 @@ gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.6'
 # twilio for sms
 gem 'twilio-ruby', '~> 4.11', '>= 4.11.1'
+# to check the weather
+gem 'forecast_io'
+# to geocode zipcodes
+gem 'geocoder'
 
 # fancy icons
 gem 'font-awesome-rails'

@@ -1,4 +1,6 @@
 class SMS
+  require 'forecast_io'
+
   def initialize(from_number, payload)
     @from_number = from_number
     @payload = payload.downcase
@@ -28,6 +30,12 @@ class SMS
       "Hi Mustachio, I <3 you."
     elsif @payload == "help me"
       "Available commands: 'joke', 'hi', 'bye', 'how are you?'"
+    elsif @payload == "weather"
+      "Enter your five digit US zip code i.e. 77057"
+    elsif @payload.match(/\d{5}/)
+      g = Geocoder.coordinates(@payload)
+      forecast = ForecastIO.forecast(g[0], g[1])
+      "Current conditions are #{forecast.currently['summary']} with a temperature of #{forecast.currently['apparentTemperature']}F"
     else
       "Sorry, but I don't know how to respond to, #{@payload}. Send 'help me' for more information"
     end
