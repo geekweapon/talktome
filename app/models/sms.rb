@@ -40,10 +40,10 @@ class SMS
   end
 
   def coordinates
-    g = Geocoder.coordinates(@payload)
+    Geocoder.coordinates(@payload)
   end
 
   def weather
-    forecast = ForecastIO.forecast(coordinates[0], coordinates[1])
+    ForecastIO.forecast(coordinates[0], coordinates[1])
   end
 end
