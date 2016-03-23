@@ -41,11 +41,9 @@ class SMS
 
   def coordinates
     g = Geocoder.coordinates(@payload)
-    g
   end
 
   def weather
     forecast = ForecastIO.forecast(coordinates[0], coordinates[1])
-    forecast
   end
 end
