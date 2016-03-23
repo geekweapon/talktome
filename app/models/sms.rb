@@ -26,8 +26,6 @@ class SMS
       "I'm doing fine, how are you?  Lovely weather we're having"
     elsif @payload == "joke"
       "Did you hear the one about the one-legged dog?"
-    elsif @payload == "poostachio"
-      "Hi Mustachio, I <3 you."
     elsif @payload == "help me"
       "Available commands: 'joke', 'hi', 'bye', 'how are you?'"
     elsif @payload == "weather"
