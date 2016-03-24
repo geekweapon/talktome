@@ -25,7 +25,7 @@ class SMS
     elsif @payload == "how are you?"
       "I'm doing fine, how are you?  Lovely weather we're having"
     elsif @payload == "joke"
-      "Did you hear the one about the one-legged dog?"
+      "Why doesn't Texas float off into the Gulf of Mexico? Because Oklahoma sucks."
     elsif @payload == "help me"
       "Available commands: 'joke', 'hi', 'bye', 'how are you?', 'weather'"
     elsif @payload == "weather"
