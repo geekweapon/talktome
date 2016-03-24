@@ -19,7 +19,7 @@ class SMS
 
   def body
     if @payload == "hi"
-      "Hello there, how are you?"
+      "Hello there, I'm a bot how are you?"
     elsif @payload == "bye"
       "Goodbye lone wolf... I will miss you"
     elsif @payload == "how are you?"
@@ -31,7 +31,7 @@ class SMS
     elsif @payload == "weather"
       "Enter your five digit US zip code i.e. 77057"
     elsif @payload.match(/\d{5}/)
-      "Current conditions are #{weather.currently['summary']} with a temperature of #{weather.currently['apparentTemperature']}F"
+      "Current conditions are #{weather.currently.summary} with a temperature of #{weather.currently.temperature}F"
     else
       "Sorry, but I don't know how to respond to, #{@payload}. Send 'help me' for more information"
     end
