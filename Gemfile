@@ -32,6 +32,8 @@ gem 'twilio-ruby', '~> 4.11', '>= 4.11.1'
 gem 'forecast_io'
 # to geocode zipcodes
 gem 'geocoder'
+# to create random names for hosts
+gem 'faker'
 
 # fancy icons
 gem 'font-awesome-rails'
