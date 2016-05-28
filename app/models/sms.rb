@@ -18,13 +18,11 @@ class SMS
   end
 
   def body
-    if @payload == "weather"
-      "Enter your five digit US zip code i.e. 77057"
-    elsif @payload.match(/\b\d{5}\b/)
+    if @payload.match(/\b\d{5}\b/)
       "Current conditions are #{weather.currently.summary} with a temperature of #{weather.currently.temperature}F"
     else
-      if Knowledge.find_by(keyword: @payload.downcase)
-        Knowledge.find_by(keyword: @payload.downcase).response
+      if Knowledge.any? {|k| k.keyword  == @payload }
+        Knowledge.find_by(keyword: @payload).response
       else
         "Sorry, I don't know how to respond to #{@payload}"
       end
