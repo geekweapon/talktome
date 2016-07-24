@@ -36,4 +36,8 @@ class SMS
   def weather
     ForecastIO.forecast(coordinates[0], coordinates[1])
   end
+
+  def payload_array
+    @payload.split(' ')
+  end
 end
