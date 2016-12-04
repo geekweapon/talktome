@@ -4,7 +4,6 @@ class MessagesController < ApplicationController
   def reply
     message_body = params["Body"]
     from_number = params["From"]
-    s = SMS.new(from_number, message_body)
-    s.send
+    SMS.new(from_number, message_body).send
   end
 end
